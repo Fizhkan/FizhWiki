@@ -5,10 +5,18 @@ import mermaid from 'astro-mermaid';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://fizhwiki.vercel.app',
 	integrations: [
 		starlight({
 			title: 'FizhWiki',
 			description: 'Personal Knowledge Base & Lab Notes untuk Aspiring Network & Security Engineer',
+			social: [
+				{ icon: 'github', label: 'GitHub', href: 'https://github.com/Fizhkan/FizhWiki' },
+			],
+			editLink: {
+				baseUrl: 'https://github.com/Fizhkan/FizhWiki/edit/main/',
+			},
+			lastUpdated: true,
 			customCss: ['./src/styles/custom.css'],
 			head: [
 				{
