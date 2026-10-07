@@ -1,51 +1,186 @@
 ---
 title: FizhWiki
-description: Personal Knowledge Base, Network & Security Lab Notes, dan Kamus Istilah Teknis.
+description: Personal Knowledge Base & Engineering Vault untuk Network & Security Engineer.
 template: splash
-hero:
-  title: FizhWiki
-  tagline: Personal Knowledge Base & Engineering Vault. Dokumentasi belajar jaringan, keamanan sistem, administrasi Linux, dan catatan pengerjaan lab.
-  actions:
-    - text: Mulai Baca Materi
-      link: /networking/01-osi-tcp-ip-model/
-      icon: right-arrow
-      variant: primary
-    - text: Buka Kamus Istilah
-      link: /kamus/networking/
-      icon: open-book
-      variant: secondary
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+<div class="fizh-hero-section">
+  <div class="fizh-hero-badge">
+    <span class="pulse-dot"></span>
+    <span>v1.0.0 • NETWORK &amp; SECURITY KNOWLEDGE VAULT</span>
+  </div>
 
-## 🗂️ Modul & Ekosistem Belajar
+  <h1 class="fizh-hero-title">
+    Dokumentasi Belajar &amp; <br />
+    <span class="fizh-gradient-text">Engineering Knowledge Base</span>
+  </h1>
 
-<CardGrid stagger>
-  <Card title="📖 Kamus Istilah (Glossary)" icon="open-book">
-    Koleksi istilah penting seputar protokol jaringan, teknik serangan/pertahanan siber, dan command administrasi Linux dengan penjelasan ringkas dan contoh konkret.
-  </Card>
+  <p class="fizh-hero-subtitle">
+    Platform catatan teknis, glosarium konsep jaringan, analisis paket keamanan, panduan homelab Arch Linux, dan dokumentasi pengerjaan lab mandiri.
+  </p>
 
-  <Card title="🌐 Networking Core" icon="laptop">
-    Catatan mendalam konsep OSI Layer, TCP/IP, perhitungan VLSM/CIDR, VLAN trunking (802.1Q), routing statis, dan OSPF.
-  </Card>
+  <div class="fizh-hero-actions">
+    <a href="/networking/01-osi-tcp-ip-model/" class="fizh-btn fizh-btn-primary">
+      Mulai Baca Materi
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </a>
+    <a href="/kamus/networking/" class="fizh-btn fizh-btn-secondary">
+      Buka Kamus Istilah
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+    </a>
+    <span class="fizh-search-hint">Tekan <strong>Ctrl + K</strong> untuk Cari</span>
+  </div>
 
-  <Card title="🛡️ Network Security" icon="shield">
-    Dokumentasi analisis paket Wireshark, pemindaian port Nmap, konfigurasi firewall (UFW/iptables), dan perbandingan plaintext vs TLS.
-  </Card>
+  <div class="fizh-stats-strip">
+    <div class="fizh-stat-item">
+      <div class="fizh-stat-number">20+</div>
+      <div class="fizh-stat-label">Catatan Teknis</div>
+    </div>
+    <div class="fizh-stat-item">
+      <div class="fizh-stat-number">7</div>
+      <div class="fizh-stat-label">Kategori Utama</div>
+    </div>
+    <div class="fizh-stat-item">
+      <div class="fizh-stat-number">3</div>
+      <div class="fizh-stat-label">Lab Hands-On</div>
+    </div>
+    <div class="fizh-stat-item">
+      <div class="fizh-stat-number">PWA</div>
+      <div class="fizh-stat-label">Offline Ready</div>
+    </div>
+  </div>
 
-  <Card title="🐧 Linux & Homelab" icon="setting">
-    Panduan administrasi Arch Linux/Debian, manajemen daemon sistem via `systemd`, otomasi Bash script, dan hardening remote SSH.
-  </Card>
+  <div class="fizh-terminal-preview">
+    <div class="fizh-terminal-header">
+      <div class="fizh-terminal-dots">
+        <span class="fizh-terminal-dot red"></span>
+        <span class="fizh-terminal-dot yellow"></span>
+        <span class="fizh-terminal-dot green"></span>
+      </div>
+      <span class="fizh-terminal-title">fizhtank@archlinux: ~</span>
+      <span></span>
+    </div>
+    <div class="fizh-terminal-body">
+      <div>
+        <span class="fizh-term-prompt">fizhtank@arch:~$</span> <span class="fizh-term-cmd">whoami --focus</span>
+      </div>
+      <div class="fizh-term-out">
+        Siraj — Mahasiswa D3 TI • Aspiring Network &amp; Security Engineer
+      </div>
+      <div>
+        <span class="fizh-term-prompt">fizhtank@arch:~$</span> <span class="fizh-term-cmd">cat /etc/fizhwiki.conf</span>
+      </div>
+      <div class="fizh-term-out">
+        modules = [Networking, Security, Linux, Labs, Certifications, Bookmarks]<br />
+        search_engine = Pagefind-Instant (Zero Server Cost, Client-Side)<br />
+        theme = Clean Minimalist Docs (Indigo / Violet Accent)
+      </div>
+      <div>
+        <span class="fizh-term-prompt">fizhtank@arch:~$</span> <span class="fizh-term-cmd">ping -c 1 lab.gateway</span>
+      </div>
+      <div class="fizh-term-out fizh-term-success">
+        64 bytes from 192.168.1.1: icmp_seq=1 ttl=64 time=0.42 ms (STATUS_READY)
+      </div>
+    </div>
+  </div>
+</div>
 
-  <Card title="🔬 Lab Notes & Write-ups" icon="document">
-    Langkah pengerjaan lab nyata (Cisco Packet Tracer & Linux VM): skema IP, konfigurasi CLI langkah-demi-langkah, hingga troubleshooting saat error.
-  </Card>
+<h2 class="fizh-grid-title">Eksplorasi Modul &amp; Dokumentasi</h2>
 
-  <Card title="🎯 Certification Tracker" icon="star">
-    Silabus dan checklist persiapan sertifikasi industri seperti CCNA (200-301) dan CompTIA Security+.
-  </Card>
-</CardGrid>
+<div class="fizh-bento-grid">
+{/* Card 1: Kamus */}
+  <a href="/kamus/networking/" class="fizh-bento-card" style="--card-accent: #818cf8;">
+    <div class="fizh-card-header">
+      <div class="fizh-card-icon-wrap">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/><path d="M6 14h6"/></svg>
+      </div>
+      <span class="fizh-card-badge">Glossary</span>
+    </div>
+    <h3 class="fizh-card-title">Kamus Istilah Teknis</h3>
+    <p class="fizh-card-desc">Glosarium ringkas seputar protokol jaringan, vektor serangan keamanan, dan arsitektur Linux dengan contoh CLI konkret.</p>
+    <div class="fizh-card-footer">
+      <span>Buka Kamus</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </div>
+  </a>
 
----
+  {/* Card 2: Networking */}
+  <a href="/networking/01-osi-tcp-ip-model/" class="fizh-bento-card" style="--card-accent: #38bdf8;">
+    <div class="fizh-card-header">
+      <div class="fizh-card-icon-wrap" style="color: #38bdf8; background: rgba(56, 189, 248, 0.1); border-color: rgba(56, 189, 248, 0.2);">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
+      </div>
+      <span class="fizh-card-badge">Core</span>
+    </div>
+    <h3 class="fizh-card-title">Networking Core</h3>
+    <p class="fizh-card-desc">Konsep enkapsulasi OSI 7-layer, kalkulasi VLSM IPv4, konfigurasi VLAN trunking 802.1Q, hingga Inter-VLAN SVI.</p>
+    <div class="fizh-card-footer" style="color: #38bdf8;">
+      <span>Pelajari Jaringan</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </div>
+  </a>
 
-> 💡 **Tips Penggunaan**: Gunakan shortcut **`Ctrl + K`** (atau tap icon search di mobile) untuk mencari istilah, command, atau konsep apa pun secara instan di seluruh isi wiki.
+  {/* Card 3: Security */}
+  <a href="/security/01-packet-analysis-wireshark/" class="fizh-bento-card" style="--card-accent: #a855f7;">
+    <div class="fizh-card-header">
+      <div class="fizh-card-icon-wrap" style="color: #a855f7; background: rgba(168, 85, 247, 0.1); border-color: rgba(168, 85, 247, 0.2);">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <span class="fizh-card-badge">Security</span>
+    </div>
+    <h3 class="fizh-card-title">Network Security</h3>
+    <p class="fizh-card-desc">Display filters Wireshark, pemindaian port Nmap (-sS vs -sT), dan implementasi firewall stateful UFW/iptables.</p>
+    <div class="fizh-card-footer" style="color: #a855f7;">
+      <span>Inspeksi Keamanan</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </div>
+  </a>
+
+  {/* Card 4: Linux */}
+  <a href="/linux/01-arch-linux-basics/" class="fizh-bento-card" style="--card-accent: #34d399;">
+    <div class="fizh-card-header">
+      <div class="fizh-card-icon-wrap" style="color: #34d399; background: rgba(52, 211, 153, 0.1); border-color: rgba(52, 211, 153, 0.2);">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg>
+      </div>
+      <span class="fizh-card-badge">Systems</span>
+    </div>
+    <h3 class="fizh-card-title">Linux &amp; Homelab</h3>
+    <p class="fizh-card-desc">Operasional harian Arch Linux, cheatsheet pacman, unit file service systemd, dan script Bash ping sweep otomatis.</p>
+    <div class="fizh-card-footer" style="color: #34d399;">
+      <span>Eksplorasi Linux</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </div>
+  </a>
+
+  {/* Card 5: Lab Notes */}
+  <a href="/labs/lab-01-multi-vlan-cisco/" class="fizh-bento-card" style="--card-accent: #f59e0b;">
+    <div class="fizh-card-header">
+      <div class="fizh-card-icon-wrap" style="color: #f59e0b; background: rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.2);">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V2"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/></svg>
+      </div>
+      <span class="fizh-card-badge">Hands-On</span>
+    </div>
+    <h3 class="fizh-card-title">Lab Notes &amp; Write-ups</h3>
+    <p class="fizh-card-desc">Dokumentasi langkah pengerjaan lab nyata di Cisco Packet Tracer dan Linux: skema IP, konfigurasi CLI, dan catatan kendala.</p>
+    <div class="fizh-card-footer" style="color: #f59e0b;">
+      <span>Baca Catatan Lab</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </div>
+  </a>
+
+  {/* Card 6: Certifications */}
+  <a href="/certifications/ccna-200-301-tracker/" class="fizh-bento-card" style="--card-accent: #ec4899;">
+    <div class="fizh-card-header">
+      <div class="fizh-card-icon-wrap" style="color: #ec4899; background: rgba(236, 72, 153, 0.1); border-color: rgba(236, 72, 153, 0.2);">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+      </div>
+      <span class="fizh-card-badge">Roadmap</span>
+    </div>
+    <h3 class="fizh-card-title">Sertifikasi &amp; Tracker</h3>
+    <p class="fizh-card-desc">Checklist silabus resmi ujian CCNA 200-301 dan CompTIA Security+ SY0-701 untuk memantau domain yang sudah dikuasai.</p>
+    <div class="fizh-card-footer" style="color: #ec4899;">
+      <span>Lihat Blueprint</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </div>
+  </a>
+</div>
