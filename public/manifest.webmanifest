@@ -1,0 +1,17 @@
+{
+  "name": "FizhWiki - Network & Security Knowledge Base",
+  "short_name": "FizhWiki",
+  "description": "Personal Knowledge Base & Lab Notes for Aspiring Network & Security Engineer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090d16",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

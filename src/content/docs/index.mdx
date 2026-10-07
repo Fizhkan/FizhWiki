@@ -1,0 +1,51 @@
+---
+title: FizhWiki
+description: Personal Knowledge Base, Network & Security Lab Notes, dan Kamus Istilah Teknis.
+template: splash
+hero:
+  title: FizhWiki
+  tagline: Personal Knowledge Base & Engineering Vault. Dokumentasi belajar jaringan, keamanan sistem, administrasi Linux, dan catatan pengerjaan lab.
+  actions:
+    - text: Mulai Baca Materi
+      link: /networking/01-osi-tcp-ip-model/
+      icon: right-arrow
+      variant: primary
+    - text: Buka Kamus Istilah
+      link: /kamus/networking/
+      icon: open-book
+      variant: secondary
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## 🗂️ Modul & Ekosistem Belajar
+
+<CardGrid stagger>
+  <Card title="📖 Kamus Istilah (Glossary)" icon="open-book">
+    Koleksi istilah penting seputar protokol jaringan, teknik serangan/pertahanan siber, dan command administrasi Linux dengan penjelasan ringkas dan contoh konkret.
+  </Card>
+
+  <Card title="🌐 Networking Core" icon="laptop">
+    Catatan mendalam konsep OSI Layer, TCP/IP, perhitungan VLSM/CIDR, VLAN trunking (802.1Q), routing statis, dan OSPF.
+  </Card>
+
+  <Card title="🛡️ Network Security" icon="shield">
+    Dokumentasi analisis paket Wireshark, pemindaian port Nmap, konfigurasi firewall (UFW/iptables), dan perbandingan plaintext vs TLS.
+  </Card>
+
+  <Card title="🐧 Linux & Homelab" icon="setting">
+    Panduan administrasi Arch Linux/Debian, manajemen daemon sistem via `systemd`, otomasi Bash script, dan hardening remote SSH.
+  </Card>
+
+  <Card title="🔬 Lab Notes & Write-ups" icon="document">
+    Langkah pengerjaan lab nyata (Cisco Packet Tracer & Linux VM): skema IP, konfigurasi CLI langkah-demi-langkah, hingga troubleshooting saat error.
+  </Card>
+
+  <Card title="🎯 Certification Tracker" icon="star">
+    Silabus dan checklist persiapan sertifikasi industri seperti CCNA (200-301) dan CompTIA Security+.
+  </Card>
+</CardGrid>
+
+---
+
+> 💡 **Tips Penggunaan**: Gunakan shortcut **`Ctrl + K`** (atau tap icon search di mobile) untuk mencari istilah, command, atau konsep apa pun secara instan di seluruh isi wiki.
