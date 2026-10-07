@@ -13,9 +13,6 @@ export default defineConfig({
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/Fizhkan/FizhWiki' },
 			],
-			editLink: {
-				baseUrl: 'https://github.com/Fizhkan/FizhWiki/edit/main/',
-			},
 			lastUpdated: true,
 			customCss: ['./src/styles/custom.css'],
 			head: [
