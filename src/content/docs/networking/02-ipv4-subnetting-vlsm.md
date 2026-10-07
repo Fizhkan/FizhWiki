@@ -9,23 +9,29 @@ Subnetting adalah teknik membagi satu blok jaringan besar menjadi beberapa sub-j
 
 ## 🧮 Rumus Inti Subnetting
 
-Dalam IPv4, alamat terdiri dari **32 bit** yang dibagi menjadi dua bagian: **Network Bits ($n$)** dan **Host Bits ($h$)**.
+Dalam IPv4, alamat terdiri dari **32 bit** yang dibagi menjadi dua porsi: **Network Bit (`n`)** dan **Host Bit (`h`)**.
 
-$$\text{Panjang Total Bit} = n + h = 32$$
+```text
+Total Bit IPv4 = Network Bit (n) + Host Bit (h) = 32 bit
+```
 
-1. **Jumlah Total Subnet**:  
-   $$2^s$$ (di mana $s$ adalah jumlah bit network yang dipinjam).
-2. **Jumlah Total IP per Subnet**:  
-   $$2^h$$ (di mana $h = 32 - \text{prefix}$).
-3. **Jumlah Host Valid (Usable Hosts)**:  
-   $$2^h - 2$$  
-   *(Dikurangi 2 karena IP pertama adalah **Network ID** dan IP terakhir adalah **Broadcast ID**)*.
+1. **Jumlah Total Subnet Baru yang Terbentuk**:  
+   `2^s`  
+   *(di mana `s` adalah jumlah bit network yang dipinjam dari porsi host)*.
+
+2. **Jumlah Total IP Address per Subnet**:  
+   `2^h`  
+   *(di mana `h` adalah sisa bit host, yaitu: `32 - prefix`)*.
+
+3. **Jumlah Host Valid (Usable IP / IP yang Bisa Dipakai PC)**:  
+   `(2^h) - 2`  
+   *(dikurangi 2 karena IP pertama dialokasikan sebagai **Network ID** dan IP terakhir dialokasikan sebagai **Broadcast ID**)*.
 
 ---
 
 ## 📊 Tabel Referensi Cepat Prefix (/24 s.d. /30)
 
-| Prefix | Subnet Mask | Wildcard Mask | Total IP ($2^h$) | Usable Hosts ($2^h - 2$) | Penggunaan Umum |
+| Prefix | Subnet Mask | Wildcard Mask | Total IP (`2^h`) | Usable Host (`(2^h) - 2`) | Penggunaan Umum |
 |---|---|---|---|---|---|
 | **/24** | 255.255.255.0 | 0.0.0.255 | 256 | 254 | Subnet LAN standar kantor / lab |
 | **/25** | 255.255.255.128 | 0.0.0.127 | 128 | 126 | LAN departemen menengah |
@@ -47,24 +53,32 @@ Alokasikan blok jaringan `192.168.10.0/24` untuk:
 * **Departemen HR**: butuh 25 host
 * **Point-to-Point Link Router**: butuh 2 host
 
-### Penyelesaian:
-1. **Subnet 1 - IT (50 host)**:
-   * Rumus: $2^h - 2 \ge 50 \implies h = 6$ ($2^6 - 2 = 62$).
-   * Prefix: $32 - 6 = \mathbf{/26}$ (Mask: `255.255.255.192`).
-   * Network ID: `192.168.10.0/26`
-   * Rentang Usable: `192.168.10.1` – `192.168.10.62`
-   * Broadcast ID: `192.168.10.63`
+### Penyelesaian Langkah Demi Langkah:
 
-2. **Subnet 2 - HR (25 host)**:
-   * Rumus: $2^h - 2 \ge 25 \implies h = 5$ ($2^5 - 2 = 30$).
-   * Prefix: $32 - 5 = \mathbf{/27}$ (Mask: `255.255.255.224`).
-   * Network ID dimulai dari IP setelah broadcast IT: `192.168.10.64/27`
-   * Rentang Usable: `192.168.10.65` – `192.168.10.94`
-   * Broadcast ID: `192.168.10.95`
+#### 1. Subnet 1 - IT (Kebutuhan: 50 host)
+* Cari nilai bit host (`h`) terkecil yang memenuhi rumus `(2^h) - 2 >= 50`:
+  * Jika `h = 5`: `(2^5) - 2 = 32 - 2 = 30` *(kurang)*
+  * Jika `h = 6`: `(2^6) - 2 = 64 - 2 = 62 host` *(cukup dan efisien!)*
+* Prefix baru: `32 - h = 32 - 6 = /26` (Subnet Mask: `255.255.255.192`).
+* **Network ID**: `192.168.10.0/26`
+* **Rentang IP Usable**: `192.168.10.1` s.d. `192.168.10.62`
+* **Broadcast ID**: `192.168.10.63`
 
-3. **Subnet 3 - Point-to-Point (2 host)**:
-   * Rumus: $2^h - 2 \ge 2 \implies h = 2$ ($2^2 - 2 = 2$).
-   * Prefix: $32 - 2 = \mathbf{/30}$ (Mask: `255.255.255.252`).
-   * Network ID: `192.168.10.96/30`
-   * Rentang Usable: `192.168.10.97` – `192.168.10.98`
-   * Broadcast ID: `192.168.10.99`
+#### 2. Subnet 2 - HR (Kebutuhan: 25 host)
+* Cari nilai bit host (`h`) terkecil yang memenuhi rumus `(2^h) - 2 >= 25`:
+  * Jika `h = 4`: `(2^4) - 2 = 16 - 2 = 14` *(kurang)*
+  * Jika `h = 5`: `(2^5) - 2 = 32 - 2 = 30 host` *(cukup dan efisien!)*
+* Prefix baru: `32 - h = 32 - 5 = /27` (Subnet Mask: `255.255.255.224`).
+* Network ID dimulai dari IP setelah Broadcast ID milik IT:
+  * **Network ID**: `192.168.10.64/27`
+* **Rentang IP Usable**: `192.168.10.65` s.d. `192.168.10.94`
+* **Broadcast ID**: `192.168.10.95`
+
+#### 3. Subnet 3 - Point-to-Point Link (Kebutuhan: 2 host)
+* Cari nilai bit host (`h`) terkecil yang memenuhi rumus `(2^h) - 2 >= 2`:
+  * Jika `h = 2`: `(2^2) - 2 = 4 - 2 = 2 host` *(sempurna!)*
+* Prefix baru: `32 - h = 32 - 2 = /30` (Subnet Mask: `255.255.255.252`).
+* Network ID dimulai dari IP setelah Broadcast ID milik HR:
+  * **Network ID**: `192.168.10.96/30`
+* **Rentang IP Usable**: `192.168.10.97` s.d. `192.168.10.98`
+* **Broadcast ID**: `192.168.10.99`

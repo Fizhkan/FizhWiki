@@ -78,5 +78,5 @@ Kamus istilah penting seputar protokol, perangkat, dan konsep routing & switchin
 * **Layer**: Layer 3
 * **Definisi**: Nilai kebalikan (invers) dari Subnet Mask yang digunakan dalam konfigurasi Access Control List (ACL) dan protokol routing seperti OSPF.
 * **Rumus Cepat**: `255.255.255.255 - Subnet Mask = Wildcard Mask`.
-  * Contoh: Subnet `/24` (`255.255.255.0`) $\rightarrow$ Wildcard: `0.0.0.255`.
-  * Subnet `/28` (`255.255.255.240`) $\rightarrow$ Wildcard: `0.0.0.15`.
+  * Contoh: Subnet `/24` (`255.255.255.0`) → Wildcard: `0.0.0.255`.
+  * Contoh: Subnet `/28` (`255.255.255.240`) → Wildcard: `0.0.0.15`.

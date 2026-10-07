@@ -3,7 +3,14 @@ title: Resource Belajar & Bookmark Web Pilihan
 description: Direktori link referensi belajar terkurasi untuk Network & Security Engineer.
 ---
 
-Kumpulan referensi website, platform lab interaktif, tool online, dan dokumentasi resmi tempat belajar sehari-hari.
+Kumpulan referensi buku standar industri, website resmi, platform lab interaktif, tool online, dan dokumentasi pegangan belajar sehari-hari.
+
+---
+
+## 📚 Buku & Referensi Akademik Utama
+
+* **[Computer Networking: A Top-Down Approach (Jim Kurose & Keith Ross)](https://gaia.cs.umass.edu/kurose_ross/index.php)**  
+  *University of Massachusetts Amherst* — Buku teks standar emas (*gold standard*) di universitas terkemuka dunia. Mengajarkan arsitektur Internet dari atas ke bawah (*Top-Down*): mulai dari aplikasi (HTTP, DNS, socket programming), transport layer (TCP/UDP, congestion control), network layer (data plane & control plane, OSPF, BGP), hingga link layer dan security. Dilengkapi slide kuliah resmi, video interaktif, dan kuis online gratis.
 
 ---
 
@@ -29,7 +36,7 @@ Kumpulan referensi website, platform lab interaktif, tool online, dan dokumentas
 
 ---
 
-## 📖 Dokumentasi & Buku Referensi Terbuka
+## 📖 Dokumentasi & Komunitas Terbuka
 
 * **ArchWiki**: [wiki.archlinux.org](https://wiki.archlinux.org/) — Dokumentasi Linux terlengkap dan paling detail di dunia untuk urusan networking, kernel, dan sistem.
 * **Cisco Documentation Portal**: [cisco.com/c/en/us/support/index.html](https://www.cisco.com/c/en/us/support/index.html) — Panduan konfigurasi command IOS & hardware Cisco.
