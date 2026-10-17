@@ -1,5 +1,6 @@
 /* ============================================================================
    FIZHWIKI - MODERN MINIMALIST ENGINEERING THEME
+   Crafted with Emil Kowalski's Design Engineering & Mobile Native Principles
    Typography: Plus Jakarta Sans (Headings), Inter (Body), JetBrains Mono (Code)
    Palette: Indigo / Violet Accent with Soft Dark Glassmorphism
    ============================================================================ */
@@ -9,6 +10,10 @@
   --sl-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --sl-font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Custom Easing Curves (Emil Kowalski / High Craft Motion) */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
 
   /* Indigo & Violet Accent Palette (Dark Mode Default) */
   --sl-color-accent-low: #1e1b4b;
@@ -23,7 +28,7 @@
   --sl-color-black: #090d16;
 
   /* Custom Glows & Borders */
-  --fizh-border: rgba(99, 102, 241, 0.18);
+  --fizh-border: rgba(99, 102, 241, 0.16);
   --fizh-border-hover: rgba(129, 140, 248, 0.45);
   --fizh-card-bg: rgba(15, 23, 42, 0.65);
   --fizh-glow: rgba(99, 102, 241, 0.12);
@@ -41,10 +46,16 @@
   --sl-color-gray-6: #f1f5f9;
   --sl-color-black: #ffffff;
 
-  --fizh-border: rgba(79, 70, 229, 0.15);
+  --fizh-border: rgba(79, 70, 229, 0.14);
   --fizh-border-hover: rgba(79, 70, 229, 0.35);
   --fizh-card-bg: rgba(248, 250, 252, 0.85);
   --fizh-glow: rgba(99, 102, 241, 0.06);
+}
+
+/* ── Mobile Native Fix: Kill tap highlight flash ── */
+html {
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
 }
 
 /* ── Typography Enhancements ── */
@@ -59,11 +70,6 @@ code, kbd, samp, pre {
   font-feature-settings: 'calt' 1, 'liga' 1;
 }
 
-/* Smooth Scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
 /* Code block polish */
 pre {
   border-radius: 0.625rem !important;
@@ -71,10 +77,10 @@ pre {
   background-color: #0b0f19 !important;
 }
 
-/* ── Hero Container & Aura ── */
+/* ── Hero Container ── */
 .fizh-hero-section {
   position: relative;
-  padding: 1.5rem 0 1.5rem;
+  padding: 1.5rem 0 1rem;
   text-align: center;
   max-width: 900px;
   margin: 0 auto;
@@ -104,7 +110,7 @@ pre {
   margin: 0 auto 2rem;
 }
 
-/* ── Hero Action Buttons ── */
+/* ── Hero Action Buttons (Emil Craft: Tactile Press, Micro-Borders, Zero Sticky Hover) ── */
 .fizh-hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -120,15 +126,18 @@ pre {
   justify-content: center;
   gap: 0.55rem;
   height: 2.75rem;
-  padding: 0 1.4rem;
+  padding: 0 1.45rem;
   border-radius: 0.5rem;
   font-size: 0.9375rem;
   font-weight: 600;
   line-height: 1;
   text-decoration: none !important;
-  transition: all 0.2s ease;
   cursor: pointer;
   box-sizing: border-box;
+  user-select: none; /* Mobile Native: prevent long-press text selection */
+  touch-action: manipulation; /* Mobile Native: remove 300ms tap delay */
+  transition: transform 140ms var(--ease-out), box-shadow 160ms ease, border-color 160ms ease, background-color 160ms ease;
+  will-change: transform;
 }
 
 .fizh-btn span {
@@ -140,30 +149,46 @@ pre {
 .fizh-btn svg {
   display: block;
   flex-shrink: 0;
+  transition: transform 160ms var(--ease-out);
 }
 
+/* Tactile press feedback */
+.fizh-btn:active {
+  transform: scale(0.97) !important;
+}
+
+/* Primary Button with subtle top-edge bevel */
 .fizh-btn-primary {
-  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+  background: linear-gradient(180deg, #6366f1 0%, #4f46e5 100%);
   color: #ffffff !important;
-  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 4px 14px rgba(79, 70, 229, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.fizh-btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.45);
-}
-
+/* Secondary Button */
 .fizh-btn-secondary {
   background: var(--sl-color-gray-6);
   color: var(--sl-color-gray-2) !important;
   border: 1px solid var(--sl-color-gray-5);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
-.fizh-btn-secondary:hover {
-  background: var(--sl-color-gray-5);
-  border-color: var(--sl-color-accent);
-  transform: translateY(-2px);
+/* Gated Hover (Prevents Sticky Hover on Mobile Touch Screens) */
+@media (hover: hover) and (pointer: fine) {
+  .fizh-btn-primary:hover {
+    transform: translateY(-1.5px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 8px 22px rgba(79, 70, 229, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+  }
+
+  .fizh-btn-primary:hover svg {
+    transform: translateX(3px);
+  }
+
+  .fizh-btn-secondary:hover {
+    background: var(--sl-color-gray-5);
+    border-color: var(--sl-color-accent);
+    transform: translateY(-1.5px);
+  }
 }
 
 /* ── Search Shortcut Display: Ctrl + K ── */
@@ -184,13 +209,11 @@ button[data-open-modal] > kbd > kbd:first-child::after {
   font-weight: 400;
 }
 
-
-
-/* ── Bento Grid Cards ── */
+/* ── Bento Grid Cards (Emil Craft: Smooth Scale Active, Precise Depth, Touch Action) ── */
 .fizh-grid-title {
   font-size: 1.5rem;
   font-weight: 700;
-  margin: 3rem 0 1.5rem;
+  margin: 1.5rem 0 1.5rem;
   text-align: center;
   color: var(--sl-color-gray-1);
 }
@@ -214,7 +237,10 @@ button[data-open-modal] > kbd > kbd:first-child::after {
   backdrop-filter: blur(12px);
   text-decoration: none !important;
   color: inherit !important;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  touch-action: manipulation;
+  user-select: none;
+  transition: transform 180ms var(--ease-out), border-color 180ms ease, box-shadow 180ms ease;
+  will-change: transform;
   overflow: hidden;
 }
 
@@ -227,17 +253,29 @@ button[data-open-modal] > kbd > kbd:first-child::after {
   height: 2px;
   background: linear-gradient(90deg, transparent, var(--card-accent, #6366f1), transparent);
   opacity: 0;
-  transition: opacity 0.25s ease;
+  transition: opacity 180ms var(--ease-out);
 }
 
-.fizh-bento-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--fizh-border-hover);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+/* Card Active Feedback */
+.fizh-bento-card:active {
+  transform: scale(0.98) !important;
 }
 
-.fizh-bento-card:hover::before {
-  opacity: 1;
+/* Card Gated Hover */
+@media (hover: hover) and (pointer: fine) {
+  .fizh-bento-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--fizh-border-hover);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 12px 30px rgba(0, 0, 0, 0.25);
+  }
+
+  .fizh-bento-card:hover::before {
+    opacity: 1;
+  }
+
+  .fizh-bento-card:hover .fizh-card-footer svg {
+    transform: translateX(4px);
+  }
 }
 
 .fizh-card-header {
@@ -257,6 +295,13 @@ button[data-open-modal] > kbd > kbd:first-child::after {
   background: rgba(99, 102, 241, 0.1);
   border: 1px solid rgba(99, 102, 241, 0.2);
   color: var(--card-accent, #818cf8);
+  transition: transform 180ms var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .fizh-bento-card:hover .fizh-card-icon-wrap {
+    transform: scale(1.05);
+  }
 }
 
 .fizh-card-badge {
@@ -299,17 +344,30 @@ button[data-open-modal] > kbd > kbd:first-child::after {
   margin-top: auto;
 }
 
-.fizh-bento-card:hover .fizh-card-footer svg {
-  transform: translateX(4px);
-  transition: transform 0.2s ease;
+.fizh-card-footer svg {
+  display: block;
+  flex-shrink: 0;
+  transition: transform 180ms var(--ease-out);
+}
+
+/* ── Accessibility: Reduced Motion (Emil Principle) ── */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .fizh-btn,
+  .fizh-bento-card,
+  .fizh-card-icon-wrap,
+  .fizh-card-footer svg,
+  .fizh-btn svg {
+    transition: none !important;
+    transform: none !important;
+  }
 }
 
 /* Responsive adjustments */
 @media (max-width: 640px) {
   .fizh-hero-title {
     font-size: 2rem;
-  }
-  .fizh-stats-strip {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
