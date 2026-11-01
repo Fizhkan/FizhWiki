@@ -238,6 +238,14 @@ html {
   background: color-mix(in srgb, var(--sl-color-gray-6) 45%, transparent);
 }
 
+/* ── Blok kode: lebih lega dan mudah dibaca ── */
+.expressive-code {
+  --ec-brdRad: 0.625rem;
+  --ec-codeFontSize: 0.875rem;
+  --ec-codeLineHeight: 1.65;
+  --ec-codePadInl: 1.1rem;
+}
+
 /* ── Diagram Mermaid ── */
 pre.mermaid {
   display: flex;

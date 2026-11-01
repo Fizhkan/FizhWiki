@@ -15,14 +15,6 @@ export default defineConfig({
 			],
 			lastUpdated: true,
 			customCss: ['./src/styles/custom.css'],
-			expressiveCode: {
-				styleOverrides: {
-					borderRadius: '0.625rem',
-					codeFontSize: '0.875rem',
-					codeLineHeight: '1.65',
-					codePaddingInline: '1.1rem',
-				},
-			},
 			head: [
 				{
 					tag: 'link',
