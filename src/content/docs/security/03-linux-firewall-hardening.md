@@ -22,7 +22,7 @@ graph LR
 
 ## Konfigurasi Praktis UFW (Uncomplicated Firewall)
 
-UFW adalah antarmuka yang sangat ramah untuk mengelola filter kernel Linux `netfilter`/`iptables`.
+UFW adalah antarmuka sederhana untuk mengelola filter kernel Linux `netfilter`/`iptables`.
 
 ```bash
 # 1. Pasang policy default: tolak semua incoming, izinkan semua outgoing

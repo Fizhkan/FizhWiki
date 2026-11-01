@@ -3,7 +3,7 @@ title: 03. Otomasi & Skrip Bash untuk Jaringan
 description: Template skrip bash praktis untuk ping sweep, parsing IP, dan pemantauan konektivitas.
 ---
 
-Bash scripting adalah keterampilan wajib bagi network & security engineer untuk mengotomasi tugas repetitif di terminal.
+Bash scripting berguna untuk mengotomasi tugas berulang di terminal, misalnya memindai satu subnet atau merapikan output log.
 
 ---
 

@@ -3,7 +3,7 @@ title: 02. Pemindaian Port dengan Nmap
 description: Teknik pemindaian port TCP/UDP, deteksi servis & OS, serta tips stealth scanning.
 ---
 
-Nmap (*Network Mapper*) adalah tool open-source esensial untuk audit inventaris jaringan dan pengujian kerentanan port.
+Nmap (*Network Mapper*) adalah tool open-source untuk mendata perangkat di jaringan dan memeriksa port yang terbuka.
 
 ---
 

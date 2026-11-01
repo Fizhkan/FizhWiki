@@ -3,7 +3,7 @@ title: Lab 02 - Packet Capture & Inspeksi Kredensial
 description: Eksperimen menangkap paket login cleartext vs sesi HTTPS TLS 1.3 menggunakan Wireshark.
 ---
 
-Dokumentasi eksperimen analisis keamanan paket: membuktikan bahaya transmisi tanpa enkripsi di jaringan lokal.
+Catatan eksperimen untuk membuktikan bahwa data yang dikirim tanpa enkripsi bisa dibaca siapa saja di jaringan lokal.
 
 ---
 
@@ -33,4 +33,4 @@ tls && tcp.port == 443
 ---
 
 ## Kesimpulan Analisis
-Penggunaan protokol plaintext di jaringan terbuka sangat rentan terhadap serangan sniffing ARP spoofing. Implementasi HTTPS/TLS 1.3 adalah standar wajib untuk melindungi privasi data dan integritas payload.
+Protokol plaintext di jaringan terbuka mudah disadap lewat sniffing, apalagi bila digabung dengan ARP spoofing. HTTPS/TLS 1.3 melindungi kerahasiaan dan keutuhan data, jadi layanan yang membawa login sebaiknya tidak lagi memakai HTTP.

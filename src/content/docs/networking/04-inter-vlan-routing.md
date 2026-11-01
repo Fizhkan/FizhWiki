@@ -17,7 +17,7 @@ graph TD
         R1 ===|"Satu kabel Trunk"| SW1
     end
 
-    subgraph Metode_2["2. Multilayer Switch (SVI) - Modern"]
+    subgraph Metode_2["2. Multilayer Switch (SVI)"]
         MLS["Layer 3 Switch (SVI Virtual Interfaces)"]
         MLS --> VLAN10["VLAN 10 SVI: 192.168.10.1"]
         MLS --> VLAN20["VLAN 20 SVI: 192.168.20.1"]
@@ -49,9 +49,9 @@ Router(config-subif)# ip address 192.168.20.1 255.255.255.0
 
 ---
 
-## Metode 2: Multilayer Switch (SVI) - Standar Enterprise
+## Metode 2: Multilayer Switch (SVI)
 
-Jauh lebih cepat karena proses routing dilakukan pada level hardware (ASIC) di switch itu sendiri tanpa harus keluar melalui kabel router luar:
+Umum dipakai di jaringan enterprise. Routing dikerjakan hardware (ASIC) di dalam switch, jadi traffic tidak perlu keluar lewat kabel ke router dan prosesnya lebih cepat:
 
 ```text
 ! Aktifkan kemampuan routing di L3 Switch
@@ -70,8 +70,8 @@ Switch(config-if)# ip address 192.168.20.1 255.255.255.0
 Switch(config-if)# no shutdown
 ```
 
-:::caution[Troubleshooting Wajib]
-Jika ping antar VLAN gagal pada L3 Switch:
+:::caution[Kalau ping antar VLAN gagal]
+Cek dua hal ini di L3 Switch:
 1. Pastikan perintah global `ip routing` sudah dijalankan.
 2. Pastikan minimal ada **satu port access aktif** yang terhubung ke perangkat di VLAN tersebut, atau interface VLAN akan berada dalam status `line protocol is down`.
 :::

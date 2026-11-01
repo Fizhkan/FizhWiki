@@ -1,43 +1,43 @@
 ---
-title: Resource Belajar & Bookmark Web Pilihan
-description: Direktori link referensi belajar terkurasi untuk Network & Security Engineer.
+title: Referensi dan Bookmark
+description: Buku, platform latihan, dan tool yang sering saya buka saat belajar jaringan dan keamanan.
 ---
 
-Kumpulan referensi buku standar industri, website resmi, platform lab interaktif, tool online, dan dokumentasi pegangan belajar sehari-hari.
+Buku, platform latihan, tool online, dan dokumentasi yang sering saya buka sehari-hari.
 
 ---
 
-## Buku & Referensi Akademik Utama
+## Buku
 
 * **[Computer Networking: A Top-Down Approach (Jim Kurose & Keith Ross)](https://gaia.cs.umass.edu/kurose_ross/index.php)**  
-  *University of Massachusetts Amherst* — Buku teks standar emas (*gold standard*) di universitas terkemuka dunia. Mengajarkan arsitektur Internet dari atas ke bawah (*Top-Down*): mulai dari aplikasi (HTTP, DNS, socket programming), transport layer (TCP/UDP, congestion control), network layer (data plane & control plane, OSPF, BGP), hingga link layer dan security. Dilengkapi slide kuliah resmi, video interaktif, dan kuis online gratis.
+  *University of Massachusetts Amherst*. Buku teks yang dipakai di banyak universitas. Materinya dibahas dari atas ke bawah (*top-down*): aplikasi (HTTP, DNS, socket programming), transport layer (TCP/UDP, congestion control), network layer (data plane dan control plane, OSPF, BGP), lalu link layer dan security. Slide kuliah, video, dan kuis online tersedia gratis di situsnya.
 
 ---
 
-## Lab Interaktif & Latihan Hands-on
+## Platform Latihan
 
-| Nama Platform | Kategori | Keterangan & Fokus | Link |
+| Platform | Kategori | Keterangan | Link |
 |---|---|---|---|
-| **Cisco Networking Academy (NetAcad)** | Networking | Kursus resmi dasar networking, Packet Tracer, dan CCNA | [netacad.com](https://www.netacad.com/) |
-| **TryHackMe** | Security | Lab praktis langkah-demi-langkah ramah pemula (Pre-Security, Jr Penetration Tester) | [tryhackme.com](https://tryhackme.com/) |
-| **OverTheWire (Bandit)** | Linux & Security | Latihan wargame berbasis terminal SSH untuk melatih command dasar Linux | [overthewire.org](https://overthewire.org/wargames/bandit/) |
-| **PortSwigger Web Security Academy** | Web Security | Lab gratis kerentanan web standar industri dari pencipta Burp Suite | [portswigger.net](https://portswigger.net/web-security) |
+| **Cisco Networking Academy (NetAcad)** | Networking | Kursus dasar networking, Packet Tracer, dan CCNA | [netacad.com](https://www.netacad.com/) |
+| **TryHackMe** | Security | Lab step-by-step yang ramah pemula (Pre-Security, Jr Penetration Tester) | [tryhackme.com](https://tryhackme.com/) |
+| **OverTheWire (Bandit)** | Linux & Security | Wargame lewat terminal SSH untuk melatih command dasar Linux | [overthewire.org](https://overthewire.org/wargames/bandit/) |
+| **PortSwigger Web Security Academy** | Web Security | Lab gratis seputar kerentanan web dari pembuat Burp Suite | [portswigger.net](https://portswigger.net/web-security) |
 
 ---
 
-## Tool Online & Cheatsheets Cepat
+## Tool Online
 
-| Nama Tool | Fungsi Utama | Link |
+| Tool | Fungsi | Link |
 |---|---|---|
-| **CyberChef** | *"The Cyber Swiss Army Knife"* — konversi biner, hex, base64, hash, enkripsi, XOR | [gchq.github.io/CyberChef](https://gchq.github.io/CyberChef/) |
-| **CIDR.xyz** | Visualisasi interaktif pembagian blok subnet IP | [cidr.xyz](https://cidr.xyz/) |
-| **ExplainShell** | Menganalisis dan membedah arti setiap argumen perintah terminal bash | [explainshell.com](https://explainshell.com/) |
-| **Wireshark Display Filter Reference** | Daftar lengkap semua filter sintaks protokol resmi Wireshark | [wireshark.org/docs/dfref](https://www.wireshark.org/docs/dfref/) |
+| **CyberChef** | Konversi biner, hex, base64, hash, enkripsi, dan XOR | [gchq.github.io/CyberChef](https://gchq.github.io/CyberChef/) |
+| **CIDR.xyz** | Visualisasi pembagian blok subnet IP | [cidr.xyz](https://cidr.xyz/) |
+| **ExplainShell** | Menjelaskan arti setiap argumen di sebuah perintah bash | [explainshell.com](https://explainshell.com/) |
+| **Wireshark Display Filter Reference** | Daftar semua field filter Wireshark per protokol | [wireshark.org/docs/dfref](https://www.wireshark.org/docs/dfref/) |
 
 ---
 
-## Dokumentasi & Komunitas Terbuka
+## Dokumentasi dan Video
 
-* **ArchWiki**: [wiki.archlinux.org](https://wiki.archlinux.org/) — Dokumentasi Linux terlengkap dan paling detail di dunia untuk urusan networking, kernel, dan sistem.
-* **Cisco Documentation Portal**: [cisco.com/c/en/us/support/index.html](https://www.cisco.com/c/en/us/support/index.html) — Panduan konfigurasi command IOS & hardware Cisco.
-* **Professor Messer (YouTube / Web)**: [professormesser.com](https://www.professormesser.com/) — Materi gratis berkualitas tinggi untuk persiapan ujian Network+ dan Security+.
+* **ArchWiki**: [wiki.archlinux.org](https://wiki.archlinux.org/) — Dokumentasi Linux yang sangat detail, berguna untuk networking, kernel, dan konfigurasi sistem.
+* **Cisco Documentation Portal**: [cisco.com/c/en/us/support/index.html](https://www.cisco.com/c/en/us/support/index.html) — Panduan konfigurasi command IOS dan hardware Cisco.
+* **Professor Messer (YouTube / Web)**: [professormesser.com](https://www.professormesser.com/) — Materi gratis untuk persiapan ujian Network+ dan Security+.

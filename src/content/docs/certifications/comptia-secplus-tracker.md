@@ -3,7 +3,7 @@ title: CompTIA Security+ (SY0-701) Tracker
 description: Checklist persiapan domain ujian CompTIA Security+ SY0-701.
 ---
 
-Pelacak persiapan menghadapi sertifikasi dasar keamanan sistem **CompTIA Security+ (SY0-701)**.
+Checklist persiapan ujian **CompTIA Security+ (SY0-701)**. Yang dicentang sudah saya pelajari.
 
 ---
 

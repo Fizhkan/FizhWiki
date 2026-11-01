@@ -1,9 +1,9 @@
 ---
 title: CCNA 200-301 Exam Blueprint Tracker
-description: Pelacak kemajuan belajar silabus resmi Cisco Certified Network Associate (CCNA).
+description: Checklist silabus resmi CCNA 200-301 untuk memantau topik yang sudah dipelajari.
 ---
 
-Pelacak persiapan menghadapi ujian sertifikasi **Cisco Certified Network Associate (CCNA 200-301)**.
+Checklist persiapan ujian **Cisco Certified Network Associate (CCNA 200-301)**. Yang dicentang sudah saya pelajari.
 
 ---
 

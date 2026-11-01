@@ -1,9 +1,9 @@
 ---
 title: 01. Model OSI 7-Layer vs TCP/IP (Pendekatan Top-Down)
-description: Pemahaman komprehensif alur enkapsulasi data dari Application Layer hingga Physical Layer berdasarkan standar Internet dan referensi Kurose & Ross.
+description: Alur enkapsulasi data dari Application Layer sampai Physical Layer, mengikuti pendekatan top-down Kurose & Ross.
 ---
 
-Model OSI (*Open Systems Interconnection*) dan protokol suite Internet (TCP/IP 5-Layer) adalah fondasi utama komunikasi komputer di seluruh dunia.
+Model OSI (*Open Systems Interconnection*) dan protokol suite Internet (TCP/IP 5-Layer) adalah dasar dari hampir semua komunikasi komputer saat ini.
 
 > **Referensi Utama**: Materi ini merujuk pada standar kurikulum internasional **[Computer Networking: A Top-Down Approach (Jim Kurose & Keith Ross)](https://gaia.cs.umass.edu/kurose_ross/index.php)**, di mana pemahaman arsitektur Internet dipelajari dari lapisan atas (*Application*) turun ke lapisan bawah (*Physical*) agar alur transmisi data logis dan mudah dipahami.
 

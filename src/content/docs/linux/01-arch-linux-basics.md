@@ -9,10 +9,10 @@ Arch Linux adalah distribusi Linux berbasis rolling-release yang mengedepankan p
 
 ## Cheatsheet Pacman (Package Manager Utama)
 
-Perintah wajib untuk pemeliharaan sistem di Arch Linux:
+Perintah yang paling sering dipakai untuk merawat sistem Arch Linux:
 
 ```bash
-# 1. Update seluruh database repositori & upgrade sistem (Wajib rutin)
+# 1. Update seluruh database repositori & upgrade sistem (jalankan rutin)
 sudo pacman -Syu
 
 # 2. Instal paket baru
