@@ -7,7 +7,7 @@ description: Mengontrol lifecycle daemon Linux, membuat custom service unit, dan
 
 ---
 
-## ⚡ Manajemen Service dengan `systemctl`
+## Manajemen Service dengan `systemctl`
 
 ```bash
 # Menjalankan service sekarang
@@ -28,7 +28,7 @@ systemctl status sshd
 
 ---
 
-## 📝 Membuat Custom Service Unit Sendiri
+## Membuat Custom Service Unit Sendiri
 
 Jika kamu membuat script otomatisasi jaringan dan ingin script tersebut berjalan sebagai background service:
 

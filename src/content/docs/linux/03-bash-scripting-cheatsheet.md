@@ -7,7 +7,7 @@ Bash scripting adalah keterampilan wajib bagi network & security engineer untuk 
 
 ---
 
-## 🔍 Skrip Sederhana 1: Subnet Ping Sweep
+## Skrip Sederhana 1: Subnet Ping Sweep
 
 Skrip cepat untuk mengecek IP mana saja yang sedang online di subnet `/24`:
 
@@ -42,7 +42,7 @@ chmod +x pingsweep.sh
 
 ---
 
-## 🛡️ Best Practices Penulisan Skrip Bash
+## Best Practices Penulisan Skrip Bash
 
 1. **Selalu sertakan Shebang**: `#!/usr/bin/env bash` di baris pertama.
 2. **Gunakan `set -euo pipefail`** di awal skrip produksi agar script otomatis berhenti jika ada variabel kosong atau perintah yang gagal (*fail-fast*).

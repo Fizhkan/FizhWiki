@@ -7,14 +7,14 @@ Dokumentasi eksperimen analisis keamanan paket: membuktikan bahaya transmisi tan
 
 ---
 
-## 🎯 Sasaran Lab
+## Sasaran Lab
 1. Menangkap sampel traffic autentikasi HTTP form login di port 80.
 2. Melakukan *TCP Stream Reassembly* untuk merekonstruksi credential plaintext.
 3. Membandingkan dengan traffic sesi enkripsi HTTPS (port 443) dengan TLS 1.3.
 
 ---
 
-## 🔬 Langkah Eksperimen & Filter Wireshark
+## Langkah Eksperimen & Filter Wireshark
 
 ### 1. Filter Permintaan HTTP POST
 ```text
@@ -32,5 +32,5 @@ tls && tcp.port == 443
 
 ---
 
-## 📝 Kesimpulan Analisis
+## Kesimpulan Analisis
 Penggunaan protokol plaintext di jaringan terbuka sangat rentan terhadap serangan sniffing ARP spoofing. Implementasi HTTPS/TLS 1.3 adalah standar wajib untuk melindungi privasi data dan integritas payload.

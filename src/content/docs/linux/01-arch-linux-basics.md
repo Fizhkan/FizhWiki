@@ -7,7 +7,7 @@ Arch Linux adalah distribusi Linux berbasis rolling-release yang mengedepankan p
 
 ---
 
-## 📦 Cheatsheet Pacman (Package Manager Utama)
+## Cheatsheet Pacman (Package Manager Utama)
 
 Perintah wajib untuk pemeliharaan sistem di Arch Linux:
 
@@ -30,7 +30,7 @@ sudo pacman -Sc
 
 ---
 
-## 🛠️ Manajemen Jaringan di Arch Linux (`iproute2` & `NetworkManager`)
+## Manajemen Jaringan di Arch Linux (`iproute2` & `NetworkManager`)
 
 Distro modern Arch menggunakan toolset `iproute2` (menggantikan `ifconfig` dan `route` yang sudah deprecated):
 

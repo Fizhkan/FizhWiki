@@ -9,7 +9,8 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'FizhWiki',
-			description: 'Personal Knowledge Base & Lab Notes untuk Aspiring Network & Security Engineer',
+			description: 'Catatan belajar jaringan, keamanan, dan Linux, lengkap dengan write-up lab.',
+			logo: { src: './src/assets/logo.svg' },
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/Fizhkan/FizhWiki' },
 			],
@@ -28,7 +29,7 @@ export default defineConfig({
 					tag: 'link',
 					attrs: {
 						rel: 'stylesheet',
-						href: 'https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=JetBrains+Mono:wght@400..700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap',
+						href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap',
 					},
 				},
 				{
@@ -37,7 +38,7 @@ export default defineConfig({
 				},
 				{
 					tag: 'meta',
-					attrs: { name: 'theme-color', content: '#4f46e5' },
+					attrs: { name: 'theme-color', content: '#17150f' },
 				},
 				{
 					tag: 'script',
@@ -52,31 +53,31 @@ export default defineConfig({
 			],
 			sidebar: [
 				{
-					label: '📖 Kamus Istilah',
+					label: 'Kamus Istilah',
 					items: [{ autogenerate: { directory: 'kamus' } }],
 				},
 				{
-					label: '🌐 Networking Core',
+					label: 'Networking',
 					items: [{ autogenerate: { directory: 'networking' } }],
 				},
 				{
-					label: '🛡️ Network Security',
+					label: 'Network Security',
 					items: [{ autogenerate: { directory: 'security' } }],
 				},
 				{
-					label: '🐧 Linux & Homelab',
+					label: 'Linux & Homelab',
 					items: [{ autogenerate: { directory: 'linux' } }],
 				},
 				{
-					label: '🔬 Lab Notes',
+					label: 'Lab Notes',
 					items: [{ autogenerate: { directory: 'labs' } }],
 				},
 				{
-					label: '🎯 Sertifikasi',
+					label: 'Sertifikasi',
 					items: [{ autogenerate: { directory: 'certifications' } }],
 				},
 				{
-					label: '🔗 Web Resources',
+					label: 'Referensi',
 					items: [{ autogenerate: { directory: 'resources' } }],
 				},
 			],

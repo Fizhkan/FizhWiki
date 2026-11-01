@@ -7,7 +7,7 @@ Pelacak persiapan menghadapi ujian sertifikasi **Cisco Certified Network Associa
 
 ---
 
-## 🎯 Domain 1: Network Fundamentals (20%)
+## Domain 1: Network Fundamentals (20%)
 - [x] Peran router, L2/L3 switch, firewall, dan AP
 - [x] Arsitektur two-tier, three-tier, spine-leaf
 - [x] Karakteristik kabel UTP (Cat5e/6), single-mode vs multi-mode fiber
@@ -18,7 +18,7 @@ Pelacak persiapan menghadapi ujian sertifikasi **Cisco Certified Network Associa
 
 ---
 
-## 🔌 Domain 2: Network Access (20%)
+## Domain 2: Network Access (20%)
 - [x] Konfigurasi dan verifikasi VLAN (normal range)
 - [x] Konfigurasi trunking 802.1Q dan Native VLAN
 - [ ] Konfigurasi Spanning Tree Protocol (STP / Rapid PVST+)
@@ -27,7 +27,7 @@ Pelacak persiapan menghadapi ujian sertifikasi **Cisco Certified Network Associa
 
 ---
 
-## 🌐 Domain 3: IP Connectivity (25%)
+## Domain 3: IP Connectivity (25%)
 - [x] Komponen tabel routing (Routing Protocol code, Prefix, Metric, AD)
 - [x] Konfigurasi static routing (Default route, Network route)
 - [ ] Single-area OSPFv2 (Router ID, Point-to-Point, Broadcast DR/BDR)
@@ -35,7 +35,7 @@ Pelacak persiapan menghadapi ujian sertifikasi **Cisco Certified Network Associa
 
 ---
 
-## ⚙️ Domain 4: IP Services (10%)
+## Domain 4: IP Services (10%)
 - [ ] Konfigurasi Inside Source NAT (Static NAT, Dynamic NAT, PAT)
 - [ ] Konfigurasi NTP (Network Time Protocol) client
 - [ ] Peran DHCP relay agent dan konfigurasi DHCP server lokal
@@ -43,7 +43,7 @@ Pelacak persiapan menghadapi ujian sertifikasi **Cisco Certified Network Associa
 
 ---
 
-## 🛡️ Domain 5: Security Fundamentals (15%)
+## Domain 5: Security Fundamentals (15%)
 - [ ] Konsep keamanan kunci (Ancaman, Kerentanan, Eksploitasi)
 - [x] Konfigurasi local password dan SSH access (crypto key generate)
 - [x] Konfigurasi Standard dan Extended IPv4 ACL
@@ -52,7 +52,7 @@ Pelacak persiapan menghadapi ujian sertifikasi **Cisco Certified Network Associa
 
 ---
 
-## 🤖 Domain 6: Automation & Programmability (10%)
+## Domain 6: Automation & Programmability (10%)
 - [ ] Manajemen jaringan tradisional vs Controller-based (DNA Center)
 - [ ] Karakteristik REST API (CRUD, HTTP verbs, JSON format)
 - [ ] Konsep dasar format data JSON, XML, dan YAML

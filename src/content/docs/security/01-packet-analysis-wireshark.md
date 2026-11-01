@@ -7,7 +7,7 @@ Wireshark adalah tool analisis paket jaringan (packet analyzer) standar industri
 
 ---
 
-## 🔍 Display Filters yang Paling Sering Digunakan
+## Display Filters yang Paling Sering Digunakan
 
 Gunakan filter ini di bar atas Wireshark untuk menyaring jutaan paket menjadi aliran data yang spesifik:
 
@@ -23,7 +23,7 @@ Gunakan filter ini di bar atas Wireshark untuk menyaring jutaan paket menjadi al
 
 ---
 
-## 🔓 Plaintext (HTTP/FTP) vs Enkripsi (HTTPS/TLS)
+## Plaintext (HTTP/FTP) vs Enkripsi (HTTPS/TLS)
 
 ### 1. Bukti Kerentanan Plaintext
 Pada protokol seperti **HTTP**, **FTP**, atau **Telnet**, kredensial dikirim tanpa enkripsi.  

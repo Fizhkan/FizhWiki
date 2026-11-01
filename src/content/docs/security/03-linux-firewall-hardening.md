@@ -7,7 +7,7 @@ Firewall adalah lapisan pertahanan pertama yang mengatur paket mana yang diizink
 
 ---
 
-## 🛡️ Kebijakan Default-Deny (Prinsip Utama)
+## Kebijakan Default-Deny (Prinsip Utama)
 
 Aturan baku keamanan jaringan: **Blokir semua koneksi masuk secara default**, lalu buka hanya port yang benar-benar dibutuhkan secara eksplisit.
 
@@ -20,7 +20,7 @@ graph LR
 
 ---
 
-## 🚀 Konfigurasi Praktis UFW (Uncomplicated Firewall)
+## Konfigurasi Praktis UFW (Uncomplicated Firewall)
 
 UFW adalah antarmuka yang sangat ramah untuk mengelola filter kernel Linux `netfilter`/`iptables`.
 
@@ -48,7 +48,7 @@ sudo ufw status numbered
 
 ---
 
-## 🔒 Tips Hardening SSH Tambahan (`/etc/ssh/sshd_config`)
+## Tips Hardening SSH Tambahan (`/etc/ssh/sshd_config`)
 
 Selain firewall, amankan konfigurasi daemon SSH:
 1. Ganti password authentication dengan **Public Key Authentication (Ed25519)**.

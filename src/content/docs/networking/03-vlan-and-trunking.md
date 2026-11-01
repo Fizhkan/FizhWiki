@@ -7,7 +7,7 @@ VLAN (Virtual Local Area Network) memungkinkan kita memecah satu switch fisik me
 
 ---
 
-## 🔌 Access Port vs Trunk Port
+## Access Port vs Trunk Port
 
 ```mermaid
 graph TD
@@ -27,7 +27,7 @@ graph TD
 
 ---
 
-## 💻 Cheat-sheet Konfigurasi Cisco IOS
+## Cheat-sheet Konfigurasi Cisco IOS
 
 ### 1. Membuat Database VLAN
 ```text

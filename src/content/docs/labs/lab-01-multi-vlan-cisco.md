@@ -7,14 +7,14 @@ Catatan pengerjaan lab simulasi topologi jaringan kantor multi-departemen dengan
 
 ---
 
-## 🎯 Sasaran Lab (Objective)
+## Sasaran Lab (Objective)
 1. Membagi jaringan ke dalam 4 segmen VLAN berbeda (IT, HR, Finance, Server Farm).
 2. Mengonfigurasi Inter-VLAN Routing via Layer 3 Switch (SVI).
 3. Menerapkan Extended ACL untuk mencegah departemen HR mengakses VLAN Finance.
 
 ---
 
-## 🗺️ Diagram Topologi
+## Diagram Topologi
 
 ```mermaid
 graph TD
@@ -33,7 +33,7 @@ graph TD
 
 ---
 
-## 📋 Skema Pengalamatan IP (VLSM)
+## Skema Pengalamatan IP (VLSM)
 
 | VLAN ID | Nama VLAN | Subnet | Gateway SVI | Usable Range |
 |---|---|---|---|---|
@@ -44,7 +44,7 @@ graph TD
 
 ---
 
-## ⚙️ Langkah Konfigurasi Kunci
+## Langkah Konfigurasi Kunci
 
 ### 1. Konfigurasi SVI & Routing pada Core Switch
 ```text
@@ -80,7 +80,7 @@ CoreSW(config-if)# ip access-group BLOCK_HR_TO_FINANCE in
 
 ---
 
-## ⚠️ Kendala & Troubleshooting (Gotchas)
+## Kendala & Troubleshooting (Gotchas)
 * **Masalah**: PC di VLAN 10 tidak bisa ping gateway `192.168.10.1`.
 * **Penyebab**: Trunk encapsulation pada switch L3 belum diset sebelum diaktifkan modenya.
 * **Solusi**: Jalankan `switchport trunk encapsulation dot1q` sebelum `switchport mode trunk`.

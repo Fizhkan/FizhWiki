@@ -7,7 +7,7 @@ Nmap (*Network Mapper*) adalah tool open-source esensial untuk audit inventaris 
 
 ---
 
-## ⚡ Perbedaan Teknik Scan Utama
+## Perbedaan Teknik Scan Utama
 
 ### 1. SYN Stealth Scan (`-sS`) — Default & Cepat
 * **Mekanisme**: Nmap mengirim paket `SYN`. Jika target membalas `SYN-ACK`, port dianggap **OPEN**. Nmap segera membalas dengan paket `RST` untuk memutus koneksi sebelum *handshake* selesai sepenuhnya.
@@ -19,7 +19,7 @@ Nmap (*Network Mapper*) adalah tool open-source esensial untuk audit inventaris 
 
 ---
 
-## 🛠️ Command Nmap Paling Berguna di Lab
+## Command Nmap Paling Berguna di Lab
 
 ```bash
 # 1. Quick Discovery (Cek host yang hidup di subnet tanpa port scan)

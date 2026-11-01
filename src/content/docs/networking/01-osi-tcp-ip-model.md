@@ -5,11 +5,11 @@ description: Pemahaman komprehensif alur enkapsulasi data dari Application Layer
 
 Model OSI (*Open Systems Interconnection*) dan protokol suite Internet (TCP/IP 5-Layer) adalah fondasi utama komunikasi komputer di seluruh dunia.
 
-> 📚 **Referensi Utama**: Materi ini merujuk pada standar kurikulum internasional **[Computer Networking: A Top-Down Approach (Jim Kurose & Keith Ross)](https://gaia.cs.umass.edu/kurose_ross/index.php)**, di mana pemahaman arsitektur Internet dipelajari dari lapisan atas (*Application*) turun ke lapisan bawah (*Physical*) agar alur transmisi data logis dan mudah dipahami.
+> **Referensi Utama**: Materi ini merujuk pada standar kurikulum internasional **[Computer Networking: A Top-Down Approach (Jim Kurose & Keith Ross)](https://gaia.cs.umass.edu/kurose_ross/index.php)**, di mana pemahaman arsitektur Internet dipelajari dari lapisan atas (*Application*) turun ke lapisan bawah (*Physical*) agar alur transmisi data logis dan mudah dipahami.
 
 ---
 
-## 🏗️ Perbandingan OSI 7-Layer vs Internet Protocol Stack (Kurose & Ross)
+## Perbandingan OSI 7-Layer vs Internet Protocol Stack (Kurose & Ross)
 
 Dalam implementasi Internet nyata, model yang paling banyak digunakan dalam kurikulum modern adalah **5-Layer Internet Protocol Stack** (menggabungkan fungsi Session dan Presentation ke dalam Application Layer):
 
@@ -44,7 +44,7 @@ graph LR
 
 ---
 
-## 📦 Protocol Data Unit (PDU) & Enkapsulasi
+## Protocol Data Unit (PDU) & Enkapsulasi
 
 Ketika data dikirim dari aplikasi menuju media transmisi fisik, data dibungkus dengan header secara bertahap (*encapsulation*):
 
@@ -58,7 +58,7 @@ Ketika data dikirim dari aplikasi menuju media transmisi fisik, data dibungkus d
 
 ---
 
-## 🤝 TCP 3-Way Handshake (Koneksi Transport Layer)
+## TCP 3-Way Handshake (Koneksi Transport Layer)
 
 Sesuai penjelasan pada buku *Kurose & Ross (Bab Transport Layer)*, sebelum aplikasi dapat mentransmisikan data reliabel melalui TCP, koneksi dua arah harus dibangun melalui proses 3 langkah:
 

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="FizhWiki">
+  <rect width="32" height="32" rx="7" fill="#d9a441"/>
+  <path d="M9 7h14v4.2H13.4v3.3h7.6v4.1h-7.6V25H9z" fill="#17150f"/>
+  <rect x="17" y="21" width="6" height="4" fill="#17150f"/>
+</svg>

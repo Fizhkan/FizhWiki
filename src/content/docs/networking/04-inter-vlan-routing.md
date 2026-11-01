@@ -7,7 +7,7 @@ Secara default, perangkat di VLAN 10 tidak dapat berkomunikasi dengan perangkat 
 
 ---
 
-## ⚖️ Dua Metode Inter-VLAN Routing
+## Dua Metode Inter-VLAN Routing
 
 ```mermaid
 graph TD
@@ -26,7 +26,7 @@ graph TD
 
 ---
 
-## 🛠️ Metode 1: Router-on-a-Stick (ROAS)
+## Metode 1: Router-on-a-Stick (ROAS)
 
 Menggunakan satu kabel fisik trunk dari Switch ke Router, lalu membuat sub-interface virtual pada router per nomor VLAN:
 
@@ -49,7 +49,7 @@ Router(config-subif)# ip address 192.168.20.1 255.255.255.0
 
 ---
 
-## 🚀 Metode 2: Multilayer Switch (SVI) - Standar Enterprise
+## Metode 2: Multilayer Switch (SVI) - Standar Enterprise
 
 Jauh lebih cepat karena proses routing dilakukan pada level hardware (ASIC) di switch itu sendiri tanpa harus keluar melalui kabel router luar:
 

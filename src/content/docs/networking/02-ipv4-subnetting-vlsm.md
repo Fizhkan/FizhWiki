@@ -7,7 +7,7 @@ Subnetting adalah teknik membagi satu blok jaringan besar menjadi beberapa sub-j
 
 ---
 
-## 🧮 Rumus Inti Subnetting
+## Rumus Inti Subnetting
 
 Dalam IPv4, alamat terdiri dari **32 bit** yang dibagi menjadi dua porsi: **Network Bit (`n`)** dan **Host Bit (`h`)**.
 
@@ -29,7 +29,7 @@ Total Bit IPv4 = Network Bit (n) + Host Bit (h) = 32 bit
 
 ---
 
-## 📊 Tabel Referensi Cepat Prefix (/24 s.d. /30)
+## Tabel Referensi Cepat Prefix (/24 s.d. /30)
 
 | Prefix | Subnet Mask | Wildcard Mask | Total IP (`2^h`) | Usable Host (`(2^h) - 2`) | Penggunaan Umum |
 |---|---|---|---|---|---|
@@ -43,7 +43,7 @@ Total Bit IPv4 = Network Bit (n) + Host Bit (h) = 32 bit
 
 ---
 
-## 🎯 Langkah Menghitung VLSM (Variable Length Subnet Mask)
+## Langkah Menghitung VLSM (Variable Length Subnet Mask)
 
 Prinsip nomor satu dalam menyusun VLSM: **Urutkan kebutuhan host dari yang TERBESAR ke yang TERKECIL** terlebih dahulu!
 

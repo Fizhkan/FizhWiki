@@ -7,14 +7,14 @@ Catatan pembangunan mesin gateway firewall homelab mandiri berbasis Linux.
 
 ---
 
-## 🎯 Sasaran Lab
+## Sasaran Lab
 1. Menyiapkan kebijakan firewall ketat: *Default Deny Incoming*.
 2. Membuka akses remote SSH khusus dengan key Ed25519 dan rate limiting.
 3. Melakukan port scanning dari mesin client menggunakan Nmap untuk menguji apakah port lain benar-benar tertutup (*filtered*).
 
 ---
 
-## ⚙️ Eksekusi Perintah Terminal
+## Eksekusi Perintah Terminal
 
 ```bash
 # Set policy
@@ -30,7 +30,7 @@ sudo ufw enable
 
 ---
 
-## 🔍 Hasil Verifikasi Pemindaian Nmap
+## Hasil Verifikasi Pemindaian Nmap
 
 Dijalankan dari komputer penguji (`192.168.1.150`):
 
