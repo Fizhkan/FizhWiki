@@ -11,6 +11,7 @@ export default defineConfig({
 			title: 'FizhWiki',
 			description: 'Catatan belajar jaringan, keamanan, dan Linux, lengkap dengan write-up lab.',
 			logo: { src: './src/assets/logo.svg' },
+			favicon: '/favicon.svg',
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/Fizhkan/FizhWiki' },
 			],
