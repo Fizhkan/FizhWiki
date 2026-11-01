@@ -32,6 +32,24 @@
   --fizh-border-hover: rgba(129, 140, 248, 0.45);
   --fizh-card-bg: rgba(15, 23, 42, 0.65);
   --fizh-glow: rgba(99, 102, 241, 0.12);
+
+  /* Reading Experience: kolom lebih nyaman, teks sedikit lebih besar, spasi lega */
+  --sl-content-width: 46rem;
+  --sl-sidebar-width: 17.5rem;
+  --sl-line-height: 1.8;
+  --sl-line-height-headings: 1.25;
+  --sl-text-body: 1rem;
+  --sl-text-code: 0.875rem;
+  --sl-text-h1: 2.25rem;
+  --sl-text-h2: 1.75rem;
+  --sl-text-h3: 1.375rem;
+  --sl-text-h4: 1.125rem;
+}
+
+@media (min-width: 50rem) {
+  :root {
+    --sl-text-body: 1.0625rem;
+  }
 }
 
 :root[data-theme='light'] {
@@ -70,11 +88,170 @@ code, kbd, samp, pre {
   font-feature-settings: 'calt' 1, 'liga' 1;
 }
 
-/* Code block polish */
-pre {
-  border-radius: 0.625rem !important;
-  border: 1px solid var(--sl-color-gray-5) !important;
-  background-color: #0b0f19 !important;
+/* ============================================================================
+   READING EXPERIENCE
+   ============================================================================ */
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--sl-color-gray-5) transparent;
+}
+
+::selection {
+  background: rgba(99, 102, 241, 0.32);
+}
+
+:focus-visible {
+  outline: 2px solid var(--sl-color-accent);
+  outline-offset: 2px;
+}
+
+/* ── Header: frosted, tetap terbaca saat scroll ── */
+.header {
+  background-color: color-mix(in srgb, var(--sl-color-bg-nav) 82%, transparent);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+  backdrop-filter: blur(14px) saturate(1.4);
+}
+
+/* ── Sidebar ── */
+.sidebar-content a {
+  border-radius: 0.5rem;
+  line-height: 1.4;
+}
+
+.sidebar-content a[aria-current='page'] {
+  font-weight: 600;
+}
+
+.sidebar-content summary .large {
+  font-family: var(--font-heading);
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
+/* ── Pemisah antar bagian ── */
+.sl-markdown-content hr {
+  margin-block: 2.25rem;
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--sl-color-gray-5), transparent);
+}
+
+/* ── Inline code: menonjol tapi tidak mengganggu alur baca ── */
+.sl-markdown-content :not(pre) > code:not(:where(.not-content *)) {
+  font-size: 0.875em;
+  padding: 0.15em 0.4em;
+  border-radius: 0.375rem;
+  background: var(--sl-color-gray-6);
+  border: 1px solid var(--sl-color-hairline, var(--sl-color-gray-5));
+  color: var(--sl-color-accent-high);
+  word-break: break-word;
+}
+
+/* ── Link dalam artikel ── */
+.sl-markdown-content a:not(:where(.not-content *)) {
+  text-underline-offset: 0.22em;
+  text-decoration-thickness: 1px;
+}
+
+/* ── List ── */
+.sl-markdown-content :is(ul, ol):not(:where(.not-content *)) > li::marker {
+  color: var(--sl-color-accent);
+}
+
+.sl-markdown-content :is(ul, ol):not(:where(.not-content *)) > li + li {
+  margin-top: 0.4rem;
+}
+
+/* ── Checklist tracker (CCNA / Security+) ── */
+.sl-markdown-content ul.contains-task-list {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.sl-markdown-content li.task-list-item {
+  padding: 0.35rem 0.6rem;
+  border-radius: 0.5rem;
+}
+
+.sl-markdown-content li.task-list-item + li.task-list-item {
+  margin-top: 0.15rem;
+}
+
+.sl-markdown-content li.task-list-item input[type='checkbox'] {
+  margin-inline-end: 0.6rem;
+  accent-color: var(--sl-color-accent);
+  transform: translateY(1px);
+}
+
+.sl-markdown-content li.task-list-item:has(> input:checked) {
+  color: var(--sl-color-gray-3);
+  background: color-mix(in srgb, var(--sl-color-accent-low) 35%, transparent);
+}
+
+/* ── Blockquote ── */
+.sl-markdown-content blockquote:not(:where(.not-content *)) {
+  padding: 0.75rem 1.1rem;
+  border-inline-start: 3px solid var(--sl-color-accent);
+  border-radius: 0 0.5rem 0.5rem 0;
+  background: color-mix(in srgb, var(--sl-color-accent-low) 40%, transparent);
+}
+
+/* ── Callout (tip / caution / warning) ── */
+.starlight-aside {
+  padding: 1rem 1.125rem;
+  border-radius: 0.75rem;
+}
+
+/* ── Tabel ── */
+.sl-markdown-content table:not(:where(.not-content *)) {
+  width: 100%;
+  font-size: 0.9rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.75rem;
+}
+
+.sl-markdown-content :is(th, td):not(:where(.not-content *)) {
+  padding: 0.7rem 1rem;
+  border: 0;
+  border-bottom: 1px solid var(--sl-color-gray-5);
+  vertical-align: top;
+}
+
+.sl-markdown-content th:not(:where(.not-content *)) {
+  background: var(--sl-color-gray-6);
+  color: var(--sl-color-gray-3);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.sl-markdown-content tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.sl-markdown-content tbody tr:nth-child(even):not(:where(.not-content *)) {
+  background: color-mix(in srgb, var(--sl-color-gray-6) 45%, transparent);
+}
+
+/* ── Diagram Mermaid ── */
+pre.mermaid {
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem 1rem;
+  overflow-x: auto;
+  border: 1px solid var(--fizh-border);
+  border-radius: 0.75rem;
+  background: var(--fizh-card-bg);
+}
+
+/* ── Prev / Next ── */
+.pagination-links a {
+  border-radius: 0.75rem;
 }
 
 /* ── Hero Container ── */
